@@ -1,0 +1,127 @@
+@font-face {
+    font-family: Fredoka;
+    src: url(./FredokaOne-Regular.ttf);
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: Fredoka;
+    background-image: url('img/101.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    display: block;
+    max-width: 150px;  /* Increased size to make logo more visible */
+    height: auto;
+    margin: 20px;
+}
+
+h1 {
+    position: relative;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.5); /* Darker semi-transparent background */
+    color: rgb(8, 8, 8); /* Make text color white for contrast */
+    border-radius: 5px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(8, 150px); /* 5 items per row */
+    grid-auto-rows: 150px; /* All rows have the same height */
+    gap: 5px;
+    background: linear-gradient(135deg, #6f00fc 0%, #fc7900 50%, #fcc700 100%);
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 25px 50px rgba(33, 33, 33, 0.25);
+}
+
+.grid-item {
+    width: 100%;
+    height: 150px;
+    background-color: #e8d2d2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px; /* Increase the font size */
+    font-weight: bold; /* Make the text bold */
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    color: #333; /* Ensure the text color contrasts with the background */
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.marked {
+    background-color: #b74b38ce;
+    color: #ffcccc;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 2px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    max-width: 80vw;
+    max-height: 80vh;
+    border-radius: 10px;
+}
+
+.popup img {
+    max-width: 100%;
+    max-height: 60vh;
+}
+
+.popup button {
+    display: block;
+    margin: 10px auto;
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: Fredoka;
+}
+
+.popup button:hover {
+    background-color: #0056b3;
+}
